@@ -7,11 +7,14 @@
   <link rel="stylesheet" type="text/css" href="styles.css">
   <title>Food Storage Planner</title>
 </head>
-<body>
+<body onload="onPageLoad()">
   <header>
     <div class="menu-container">
+      <div class="menu-item" id="menu-home">
+        <a>Home</a>
+      </div>
       <div class="menu-item">
-        <a href="#">Interactive Course</a>
+        <a href="/course/course-home.html">Interactive Course</a>
       </div>
       <div class="menu-item">
         <a href="#">About</a>
@@ -28,5 +31,8 @@
 </html>
 
 <script>
-
+  function onPageLoad() {
+    console.log(window.location.pathname);
+    if (window.location.pathname === '/') document.getElementById('menu-home').style.backgroundColor = "#E0DCE5";
+  }
 </script>
