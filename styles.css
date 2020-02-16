@@ -2,6 +2,11 @@ header {
     height: 100px;
 }
 
+.active {
+    color: #5B5859;
+    text-decoration: underline;
+}
+
 .menu-container {
     display: flex;
     justify-content: space-evenly;

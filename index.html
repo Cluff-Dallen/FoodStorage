@@ -7,20 +7,17 @@
   <link rel="stylesheet" type="text/css" href="styles.css">
   <title>Food Storage Planner</title>
 </head>
-<body onload="onPageLoad()">
+<body>
   <header>
     <div class="menu-container">
       <div class="menu-item" id="menu-home">
-        <a id="menu-home-icon">Home</a>
+        <a class="active" id="menu-home-icon">Home</a>
       </div>
       <div class="menu-item">
         <a href="/course/course-home.html">Interactive Course</a>
       </div>
       <div class="menu-item">
-        <a href="#">About</a>
-      </div>
-      <div class="menu-item">
-        <a href="#">Resources</a>
+        <a href="/resources-page/resources-home.html">Resources</a>
       </div>
     </div>
   </header>
@@ -29,14 +26,3 @@
   </main>
 </body>
 </html>
-
-<script>
-  function onPageLoad() {
-    console.log(window.location.pathname);
-    if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
-      let icon = document.getElementById('menu-home-icon');
-      icon.style.color = "#5B5859";
-      icon.style.textDecoration = "underline";
-    }
-  }
-</script>
