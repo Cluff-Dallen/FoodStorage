@@ -1,3 +1,7 @@
+* {
+    font-family: 'Libre Franklin';
+}
+
 header {
     height: 100px;
 }
@@ -12,8 +16,7 @@ header {
     justify-content: space-evenly;
 }
 
-.menu-item { 
-    font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif; 
+.menu-item {
     font-size: 24px; 
     font-style: normal; 
     font-variant: normal; 
@@ -27,4 +30,18 @@ header {
 a {
     text-decoration: none;
     color: black;
+}
+
+h1 {
+    text-align: center;
+}
+
+#resource-items-container {
+  width: 100%;
+}
+
+.resource-item {
+  width: 100%;
+  height: auto;
+  border-bottom: lightgray 2px solid;
 }
