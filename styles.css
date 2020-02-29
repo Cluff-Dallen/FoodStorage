@@ -3,20 +3,27 @@
     margin: 0;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
+h1 {
+text-align: center;
+}
+
+h2 {
+font-weight: bold;
+}
+
+/********* Menu *********/
 header {
-    height: 100px;
+  height: 100px;
 }
-
-.active {
-    color: #5B5859;
-    text-decoration: underline;
-}
-
 .menu-container {
     display: flex;
     justify-content: space-evenly;
 }
-
 .menu-item {
     font-size: 24px; 
     font-style: normal; 
@@ -27,30 +34,21 @@ header {
     text-decoration: none;
     color: black;
 }
-
-a {
-    text-decoration: none;
-    color: black;
+.active {
+  color: #5B5859;
+  text-decoration: underline;
 }
 
-h1 {
-  text-align: center;
-}
-
-h2 {
-  font-weight: bold;
-}
+/******** Resources *********/
 
 #resource-items-container {
   width: 100%;
 }
-
 .resource-item {
   width: 100%;
   height: auto;
   border-bottom: lightgray 2px solid;
 }
-
 .item-container {
   width: 100%;
   background-color: lightgray;
