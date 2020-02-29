@@ -1,5 +1,6 @@
 * {
     font-family: 'Libre Franklin';
+    margin: 0;
 }
 
 header {
@@ -33,7 +34,11 @@ a {
 }
 
 h1 {
-    text-align: center;
+  text-align: center;
+}
+
+h2 {
+  font-weight: bold;
 }
 
 #resource-items-container {
@@ -44,4 +49,9 @@ h1 {
   width: 100%;
   height: auto;
   border-bottom: lightgray 2px solid;
+}
+
+.item-container {
+  width: 100%;
+  background-color: lightgray;
 }

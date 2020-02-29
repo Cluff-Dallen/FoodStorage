@@ -40,7 +40,12 @@
   function loadItems() {
     resourceItemsData.forEach(element => {
       let resourceItem = document.createElement('div');
-      resourceItem.innerHTML = `<h1>${element.name}</h1>`
+      resourceItem.innerHTML = `
+      <div class="item-container">
+        <h3>${element.name}</h3>
+        <p>$${element.price}.00</p>
+      </div>
+      `;
       document.getElementById('resource-items-container').appendChild(resourceItem);
     });
     console.log(resourceItemsData[0]);
