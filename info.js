@@ -2,6 +2,8 @@ const resourceItemsData = [
   {
     "name": "7 Gallon Water Jug",
     "href": "https://www.amazon.com/Reliance-Products-Aqua-Tainer-Gallon-Container/dp/B001QC31G6?ref_=fsclp_pl_dp_2",
+    "imgSrc": "https://images-na.ssl-images-amazon.com/images/I/51eAFKbEKoL._AC_.jpg",
+    
     "price": 15.00
   },
   {

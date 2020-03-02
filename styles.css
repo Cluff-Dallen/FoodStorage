@@ -39,17 +39,50 @@ header {
   text-decoration: underline;
 }
 
+/******** Course *********/
+
+#intro {
+  width: 75%;
+  margin: 10px auto 10px auto;
+}
+
 /******** Resources *********/
 
 #resource-items-container {
   width: 100%;
 }
-.resource-item {
-  width: 100%;
-  height: auto;
-  border-bottom: lightgray 2px solid;
+
+.item-container {
+  display: flex;
+  flex-direction: row;
 }
 .item-container {
+  box-sizing: border-box;
   width: 100%;
-  background-color: lightgray;
+  border-top: lightgray solid 1px;
+  padding: 15px;
+}
+
+.item-image-container {
+  height: 150px;
+  width: 150px;
+}
+
+.item-image {
+  height: 150px;
+  width: 150px;
+}
+
+.resource-item-button {
+  background-color: rgb(49, 49, 49);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 30px;
 }
