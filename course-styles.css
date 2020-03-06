@@ -1,0 +1,50 @@
+/******** Course *********/
+
+#intro {
+width: 75%;
+margin: 10px auto 10px auto;
+}
+
+main {
+  margin: 0 20% 0 20%;
+}
+
+.info-icon {
+  width: 15px;
+  height: 15px;
+}
+
+.section-title-container {
+  margin-top: 10px;
+  display: flex;
+}
+
+.section-title {
+  margin-right: 5px;
+}
+
+.course-text-input {
+  height: 20px;
+  line-height: 20px;
+  font-size: 20px;
+  margin: 5px 0 0 5px;
+}
+
+.course-number-input {
+  height: 20px;
+  line-height: 20px;
+  font-size: 20px;
+  margin: 5px 0 0 5px;
+  width: 80px;
+}
+
+
+/*** SECTION 2 ***/
+#section-2 {
+  display: none;
+}
+
+/*** SECTION 3 ***/
+#section-3 {
+  display: none;
+}

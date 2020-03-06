@@ -1,20 +1,3 @@
-* {
-    font-family: 'Libre Franklin';
-    margin: 0;
-}
-
-a {
-  text-decoration: none;
-  color: black;
-}
-
-h1 {
-text-align: center;
-}
-
-h2 {
-font-weight: bold;
-}
 
 /********* Menu *********/
 header {

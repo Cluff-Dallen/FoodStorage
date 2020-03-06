@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" type="text/css" href="../styles.css">
+  <link rel="stylesheet" type="text/css" href="../course-styles.css">
+  <link rel="stylesheet" type="text/css" href="../general-styles.css">
   <link href="https://fonts.googleapis.com/css?family=Libre+Franklin&display=swap" rel="stylesheet">
   <title>Document</title>
 </head>
@@ -29,25 +30,50 @@
     </div>
     <div id="section-1">
       <h2>72-Hour Kit</h2>
-      <p>Hello There</p>
-      <p>Here are some foodies that you should have</p>
-      <span>(i)</span>
-      <input type="text">
-      <p>Hello There</p>
-      <input type="text">
-      <p>Hello There</p>
-      <input type="text">
-      <p>Hello There</p>
-      <input type="text">
-      <p>Hello There</p>
-      <input type="text">
+      <div class="subsection">
+        <div class="section-title-container">
+          <p class="section-title">Food</p><img class="info-icon" src="../images/info.png">
+        </div>
+        <div id="food-input-container" class="input-container">
+          <input class="course-text-input" type="text"></input><input class="course-number-input" type="number"></input><br>
+          <input class="course-text-input" type="text"></input><input class="course-number-input" type="number"></input><br>
+          <input class="course-text-input" type="text"></input><input class="course-number-input" type="number"></input><br>
+        </div>
+        <button onclick="_removeInput('food-input-container')">Add +</button><button>Remove -</button>
+      </div>
+      <button class="course-button" onclick="_changeSectionFromTo('section-1', 'section-2')">Next</button>
     </div>
     <div id="section-2">
       <h2>1 Month (30 Days)</h2>
+      <button class="course-button" onclick="_changeSectionFromTo('section-2', 'section-1')">Prev</button>
+      <button class="course-button" onclick="_changeSectionFromTo('section-2', 'section-3')">Next</button>
     </div>
     <div id="section-3">
       <h2>3 Month (90 Days)</h2>
+      <button class="course-button" onclick="_changeSectionFromTo('section-3', 'section-2')">Prev</button>
     </div>
   </main>
 </body>
 </html>
+
+<script>
+  /*** Variables ***/
+  let data72Hour = {};
+  let data1Month = {};
+  let data3Month = {};
+
+  /*
+   * _changeSectionFromTo
+   * This is meant to switch which section is being shown
+   */
+  function _changeSectionFromTo(changeFrom, changeTo) {
+    document.getElementById(changeFrom).style.display = "none";
+    document.getElementById(changeTo).style.display = "block";
+  }
+  function _addInput(section) {
+
+  }
+  function _removeInput(section) {
+
+  }
+</script>
