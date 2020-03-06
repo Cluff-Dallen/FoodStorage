@@ -1,29 +1,32 @@
 /******** Course *********/
 
 #intro {
-width: 75%;
+width: 90%;
 margin: 10px auto 10px auto;
 }
 
 main {
-  margin: 0 20% 0 20%;
+  margin: 0 10% 0 10%;
 }
 
 .info-icon {
-  width: 15px;
-  height: 15px;
+  margin-left: 5px;
+  width: 18px;
+  height: 18px;
 }
 
 .section-title-container {
-  margin-top: 10px;
+  margin: 10px 0 0 5px;
+  display: flex;
+  width: 306px;
+}
+
+.section-titles {
   display: flex;
 }
 
-.section-title {
-  margin-right: 5px;
-}
-
 .course-text-input {
+  width: 300px;
   height: 20px;
   line-height: 20px;
   font-size: 20px;
