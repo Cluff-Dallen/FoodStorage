@@ -76,6 +76,6 @@ main {
 }
 
 /*** DISPLAY: NONE ***/
-#basic-info, #section-1, #section-2, #section-3 {
+#basic-info, #section-1, #section-2, #section-3, #final-page {
   display: none;
 }

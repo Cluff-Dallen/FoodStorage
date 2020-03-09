@@ -33,14 +33,14 @@
     </div>
     <div id="basic-info">
       <h1 id="basic-info-header">Basic Info</h1>
-      <div class="flex"><p class="info-title">Number of people in household: </p><input class="course-number-input" type="number"></input></div>
+      <div class="flex"><p class="info-title">Number of people in household: </p><input id="basic-info-people-input" class="course-number-input" type="number"></input></div>
       <div class="button-container">
         <button class="course-button" onclick="_changeSectionFromTo('basic-info', 'intro')">Prev</button>
-        <button class="course-button" onclick="_changeSectionFromTo('basic-info', 'section-1'); _storeData(info);">Next</button>
+        <button class="course-button" onclick="_changeSectionFromTo('basic-info', 'section-1'); _storeData('basicInfo');">Next</button>
       </div>
     </div>
     <div id="section-1">
-      <h2>72-Hour Kit</h2>
+      <h1>72-Hour Kit</h1>
       <div class="subsection">
         <div class="section-titles">
           <div class="section-title-container">
@@ -63,16 +63,23 @@
       </div>
     </div>
     <div id="section-2">
-      <h2>1 Month (30 Days)</h2>
+      <h1>1 Month (30 Days)</h1>
       <div class="button-container">
         <button class="course-button" onclick="_changeSectionFromTo('section-2', 'section-1')">Prev</button>
         <button class="course-button" onclick="_changeSectionFromTo('section-2', 'section-3')">Next</button>
       </div>
     </div>
     <div id="section-3">
-      <h2>3 Month (90 Days)</h2>
+      <h1>3 Month (90 Days)</h1>
       <div class="button-container">
         <button class="course-button" onclick="_changeSectionFromTo('section-3', 'section-2')">Prev</button>
+        <button class="course-button" onclick="_changeSectionFromTo('section-3', 'final-page')">Next</button>
+      </div>
+    </div>
+    <div id="final-page">
+      <h1>Your Plan</h1>
+      <div class="button-container">
+        <button class="course-button" onclick="_changeSectionFromTo('final-page', 'section-3')">Edit Plan</button>
       </div>
     </div>
   </main>
@@ -81,14 +88,17 @@
 
 <script>
   /*** DATA ***/
-  let basicInfo = {};
+  let basicInfo = { peopleCount: 0};
   let data72Hour = {};
   let data1Month = {};
   let data3Month = {};
 
   /*** SETTERS ***/
   function setBasicInfo() {
-
+     let inputAmount = parseInt(document.getElementById('basic-info-people-input').value);
+     if (!inputAmount) return;
+     basicInfo.peopleCount = inputAmount;
+    console.log(basicInfo);
   }
   function set72Hour() {
 
