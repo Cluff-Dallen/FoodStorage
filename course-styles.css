@@ -5,6 +5,10 @@ main {
 .flex {
   display: flex;
 }
+.info-icon {
+  width: 18px;
+  height: 18px;
+}
 
 /*** Buttons ***/
 .button-container {
@@ -42,8 +46,7 @@ main {
 .info-title {
   margin-top: auto;
 }
-
-.course-number-input {
+.info-number-input {
   height: 20px;
   line-height: 20px;
   font-size: 20px;
@@ -51,29 +54,6 @@ main {
   width: 80px;
 }
 
-.info-icon {
-  margin-left: 5px;
-  width: 18px;
-  height: 18px;
-}
-
-.section-title-container {
-  margin: 10px 0 0 5px;
-  display: flex;
-  width: 306px;
-}
-
-.section-titles {
-  display: flex;
-}
-
-.course-text-input {
-  width: 300px;
-  height: 20px;
-  line-height: 20px;
-  font-size: 20px;
-  margin: 5px 0 0 5px;
-}
 
 /*** DISPLAY: NONE ***/
 #basic-info, #section-1, #section-2, #section-3, #final-page {

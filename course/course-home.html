@@ -33,7 +33,7 @@
     </div>
     <div id="basic-info">
       <h1 id="basic-info-header">Basic Info</h1>
-      <div class="flex"><p class="info-title">Number of people in household: </p><input id="basic-info-people-input" class="course-number-input" type="number"></input></div>
+      <div class="flex"><p class="info-title">Number of people in household: </p><input id="basic-info-people-input" class="info-number-input" type="number"></input></div>
       <div class="button-container">
         <button class="course-button" onclick="_changeSectionFromTo('basic-info', 'intro')">Prev</button>
         <button class="course-button" onclick="_changeSectionFromTo('basic-info', 'section-1'); _storeData('basicInfo');">Next</button>
@@ -41,22 +41,9 @@
     </div>
     <div id="section-1">
       <h1>72-Hour Kit</h1>
-      <div class="subsection">
-        <div class="section-titles">
-          <div class="section-title-container">
-            <p class="section-title">Food</p><img class="info-icon" src="../images/info.png">
-          </div>
-          <div>
-            <p class="section-title-container">Qty. per day</p>
-          </div>
-        </div>
-        <div id="food-input-container" class="input-container">
-          <input class="course-text-input" type="text"></input><input class="course-number-input" type="number"></input><br>
-          <input class="course-text-input" type="text"></input><input class="course-number-input" type="number"></input><br>
-          <input class="course-text-input" type="text"></input><input class="course-number-input" type="number"></input><br>
-        </div>
-        <button onclick="_removeInput('food-input-container')">Add +</button><button>Remove -</button>
-      </div>
+        <img class="info-icon" src="../images/info.png">
+        <button class="course-button" onclick="_removeInput('food-input-container')">Add</button>
+        <button class="course-button">Remove</button>
       <div class="button-container">
         <button class="course-button" onclick="_changeSectionFromTo('section-1', 'basic-info')">Prev</button>
         <button class="course-button" onclick="_changeSectionFromTo('section-1', 'section-2')">Next</button>
