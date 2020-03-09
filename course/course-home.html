@@ -25,8 +25,19 @@
   </header>
   <main>
     <div id="intro">
-      <h1>Welcome to the Interactive Course</h1>
-      <p>During this course, we will provide you with a step by step process that will help you to create your own personalized checkist to create a 72-Hour Kit and create checkmarks to develop a 3-month food storage.</p>
+      <h1 id="intro-header">Welcome to the Interactive Course</h1>
+      <p id="intro-paragraph">During this course, we will provide you with valuable information about food storage and walk you through the process of creating a simple plan to create food storage. Information includes creating a 72-hour kit, a 1 month, and a 3 month storage creation. At the end, a checklist of your customized plans will be available for your use to print or download.</p>
+      <div class="button-container">
+        <button class="course-button" onclick="_changeSectionFromTo('intro', 'basic-info')">Next</button>
+      </div>
+    </div>
+    <div id="basic-info">
+      <h1 id="info-header">Basic Info</h1>
+      <p>How many people in household: </p><input class="course-number-input" type="number"></input>
+      <div class="button-container">
+        <button class="course-button" onclick="_changeSectionFromTo('basic-info', 'intro')">Prev</button>
+        <button class="course-button" onclick="_changeSectionFromTo('basic-info', 'section-1')">Next</button>
+      </div>
     </div>
     <div id="section-1">
       <h2>72-Hour Kit</h2>
@@ -46,16 +57,23 @@
         </div>
         <button onclick="_removeInput('food-input-container')">Add +</button><button>Remove -</button>
       </div>
-      <button class="course-button" onclick="_changeSectionFromTo('section-1', 'section-2')">Next</button>
+      <div class="button-container">
+        <button class="course-button" onclick="_changeSectionFromTo('section-1', 'basic-info')">Prev</button>
+        <button class="course-button" onclick="_changeSectionFromTo('section-1', 'section-2')">Next</button>
+      </div>
     </div>
     <div id="section-2">
       <h2>1 Month (30 Days)</h2>
-      <button class="course-button" onclick="_changeSectionFromTo('section-2', 'section-1')">Prev</button>
-      <button class="course-button" onclick="_changeSectionFromTo('section-2', 'section-3')">Next</button>
+      <div class="button-container">
+        <button class="course-button" onclick="_changeSectionFromTo('section-2', 'section-1')">Prev</button>
+        <button class="course-button" onclick="_changeSectionFromTo('section-2', 'section-3')">Next</button>
+      </div>
     </div>
     <div id="section-3">
       <h2>3 Month (90 Days)</h2>
-      <button class="course-button" onclick="_changeSectionFromTo('section-3', 'section-2')">Prev</button>
+      <div class="button-container">
+        <button class="course-button" onclick="_changeSectionFromTo('section-3', 'section-2')">Prev</button>
+      </div>
     </div>
   </main>
 </body>
