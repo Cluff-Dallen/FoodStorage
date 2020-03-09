@@ -32,11 +32,11 @@
       </div>
     </div>
     <div id="basic-info">
-      <h1 id="info-header">Basic Info</h1>
-      <p>How many people in household: </p><input class="course-number-input" type="number"></input>
+      <h1 id="basic-info-header">Basic Info</h1>
+      <div class="flex"><p class="info-title">Number of people in household: </p><input class="course-number-input" type="number"></input></div>
       <div class="button-container">
         <button class="course-button" onclick="_changeSectionFromTo('basic-info', 'intro')">Prev</button>
-        <button class="course-button" onclick="_changeSectionFromTo('basic-info', 'section-1')">Next</button>
+        <button class="course-button" onclick="_changeSectionFromTo('basic-info', 'section-1'); _storeData(info);">Next</button>
       </div>
     </div>
     <div id="section-1">
@@ -80,23 +80,53 @@
 </html>
 
 <script>
-  /*** Variables ***/
+  /*** DATA ***/
+  let basicInfo = {};
   let data72Hour = {};
   let data1Month = {};
   let data3Month = {};
 
+  /*** SETTERS ***/
+  function setBasicInfo() {
+
+  }
+  function set72Hour() {
+
+  }
+  function set1Month() {
+
+  }
+  function set3Month() {
+
+  }
+  function _storeData(location) {
+    if (location === "basicInfo") setBasicInfo();
+    if (location === "72Hour") set72Hour();
+    if (location === "1Month") set1Month();
+    if (location === "3Month") set3Month();
+  }
+
+  /*** TOGGLE ***/
+  /*
+   * _addInput
+   * Adds an text input to a given section
+   */
+  function _addInput(section) {
+
+  }
+  /*
+   * _removeInput
+   * Removes an text input to a given section
+   */
+  function _removeInput(section) {
+
+  }
   /*
    * _changeSectionFromTo
    * This is meant to switch which section is being shown
    */
-  function _changeSectionFromTo(changeFrom, changeTo) {
+   function _changeSectionFromTo(changeFrom, changeTo) {
     document.getElementById(changeFrom).style.display = "none";
     document.getElementById(changeTo).style.display = "block";
-  }
-  function _addInput(section) {
-
-  }
-  function _removeInput(section) {
-
   }
 </script>
