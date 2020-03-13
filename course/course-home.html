@@ -28,25 +28,78 @@
       <h1 id="intro-header">Welcome to the Interactive Course</h1>
       <p id="intro-paragraph">During this course, we will provide you with valuable information about food storage and walk you through the process of creating a simple plan to create food storage. Information includes creating a 72-hour kit, a 1 month, and a 3 month storage creation. At the end, a checklist of your customized plans will be available for your use to print or download.</p>
       <div class="button-container">
-        <button class="course-button" onclick="_changeSectionFromTo('intro', 'basic-info')">Next</button>
+        <button class="course-button" onclick="_goToNextPage('intro', 'basic-info')">Next</button>
       </div>
     </div>
     <div id="basic-info">
       <h1 id="basic-info-header">Basic Info</h1>
       <div class="flex"><p class="info-title">Number of people in household: </p><input id="basic-info-people-input" class="info-number-input" type="number"></input></div>
       <div class="button-container">
-        <button class="course-button" onclick="_changeSectionFromTo('basic-info', 'intro')">Prev</button>
-        <button class="course-button" onclick="_changeSectionFromTo('basic-info', 'section-1'); _storeData('basicInfo');">Next</button>
+        <button class="course-button" onclick="_goToPreviousPage('basic-info', 'intro')">Prev</button>
+        <button class="course-button" onclick="_goToNextPage('basic-info', 'section-1');">Next</button>
       </div>
     </div>
     <div id="section-1">
-      <h1>72-Hour Kit</h1>
-        <img class="info-icon" src="../images/info.png">
-        <button class="course-button" onclick="_removeInput('food-input-container')">Add</button>
-        <button class="course-button">Remove</button>
+      <h1 class="section-title">72-Hour Kit</h1>
+        <div id="food-container-72hour">
+          <div id="food-header-72hour">
+            <h2 class="food-title container-title">Food</h2>
+            <img class="info-icon" src="../images/info.png">
+          </div>
+          <div id="food-item-container-72hour">
+            <div class="food-item">
+              <input class="item-input" type="text" placeholder="Food Item">
+              <input class="item-input"type="number" placeholder="Qty.">
+              <input class="item-input" type="text" placeholder="Scale (Optional)">
+              <br/>
+            </div>
+            <div class="food-item">
+              <input class="item-input" type="text" placeholder="Food Item">
+              <input class="item-input" type="number" placeholder="Qty.">
+              <input class="item-input" type="text" placeholder="Scale (Optional)">
+              <br/>
+            </div>
+            <div class="food-item">
+              <input class="item-input" type="text" placeholder="Food Item">
+              <input class="item-input" type="number" placeholder="Qty.">
+              <input class="item-input" type="text" placeholder="Scale (Optional)">
+              <br/>
+            </div>
+          </div>
+          <button class="course-button" onclick="_addInput('food-item-container-72hour')">Add</button>
+          <button class="course-button" onclick="_removeInput('food-item-container-72hour')">Remove</button>  
+        </div>
+        <div id="supplies-container-72hour">
+          <div id="supplies-header-72hour">
+            <h2 class="food-title container-title">Supplies</h2>
+            <img class="info-icon" src="../images/info.png">
+          </div>
+          <div id="supplies-item-container-72hour">
+            <div class="food-item">
+              <input class="item-input" type="text" placeholder="Supply Item">
+              <input class="item-input"type="number" placeholder="Qty.">
+              <input class="item-input" type="text" placeholder="Scale (Optional)">
+              <br/>
+            </div>
+            <div class="food-item">
+              <input class="item-input" type="text" placeholder="Supply Item">
+              <input class="item-input" type="number" placeholder="Qty.">
+              <input class="item-input" type="text" placeholder="Scale (Optional)">
+              <br/>
+            </div>
+            <div class="food-item">
+              <input class="item-input" type="text" placeholder="Supply Item">
+              <input class="item-input" type="number" placeholder="Qty.">
+              <input class="item-input" type="text" placeholder="Scale (Optional)">
+              <br/>
+            </div>
+          </div>
+          <button class="course-button" onclick="_addInput('supplies-item-container-72hour')">Add</button>
+          <button class="course-button" onclick="_removeInput('supplies-item-container-72hour')">Remove</button>  
+        </div>
       <div class="button-container">
-        <button class="course-button" onclick="_changeSectionFromTo('section-1', 'basic-info')">Prev</button>
-        <button class="course-button" onclick="_changeSectionFromTo('section-1', 'section-2')">Next</button>
+        <button class="course-button" onclick="_goToNextPage('section-1', 'basic-info')">Prev</button>
+        <button class="course-button" onclick="_goToPreviousPage('section-1', 'section-2')">Next</button>
       </div>
     </div>
     <div id="section-2">
@@ -85,7 +138,6 @@
      let inputAmount = parseInt(document.getElementById('basic-info-people-input').value);
      if (!inputAmount) return;
      basicInfo.peopleCount = inputAmount;
-    console.log(basicInfo);
   }
   function set72Hour() {
 
@@ -97,10 +149,10 @@
 
   }
   function _storeData(location) {
-    if (location === "basicInfo") setBasicInfo();
-    if (location === "72Hour") set72Hour();
-    if (location === "1Month") set1Month();
-    if (location === "3Month") set3Month();
+    if (location === "basic-info") setBasicInfo();
+    if (location === "section-1") set72Hour();
+    if (location === "section-2") set1Month();
+    if (location === "section-3") set3Month();
   }
 
   /*** TOGGLE ***/
@@ -117,6 +169,15 @@
    */
   function _removeInput(section) {
 
+  }
+
+  function _goToPreviousPage(changeFrom, changeTo) {
+    _storeData(changeFrom);
+    _changeSectionFromTo(changeFrom, changeTo);
+  }
+  function _goToNextPage(changeFrom, changeTo) {
+    _storeData(changeFrom);
+    _changeSectionFromTo(changeFrom, changeTo);
   }
   /*
    * _changeSectionFromTo
