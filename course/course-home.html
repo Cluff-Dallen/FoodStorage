@@ -36,32 +36,32 @@
       <div class="flex"><p class="info-title">Number of people in household: </p><input id="basic-info-people-input" class="info-number-input" type="number"></input></div>
       <div class="button-container">
         <button class="course-button" onclick="_goToPreviousPage('basic-info', 'intro')">Prev</button>
-        <p id="basic-info-error-message" class="error-message">One or more required inputs are not completed</p>
+        <p id="basic-info-error-message" class="error-message hidden">One or more required inputs are not completed</p>
         <button class="course-button" onclick="_goToNextPage('basic-info', 'section-1');">Next</button>
       </div>
     </div>
     <div id="section-1">
       <h1 class="section-title">72-Hour Kit</h1>
         <div id="food-container-72hour">
-          <div id="food-header-72hour">
+          <div class="food-header">
             <h2 class="food-title container-title">Food</h2>
             <img class="info-icon" src="../images/info.png">
           </div>
           <div id="food-item-container-72hour">
-            <div class="food-item">
-              <input class="item-input" type="text" placeholder="Food Item">
+            <div class="course-item">
+              <input class="item-input" type="text" placeholder="Item Name">
               <input class="item-input"type="number" placeholder="Qty.">
               <input class="item-input" type="text" placeholder="Scale (Optional)">
               <br/>
             </div>
-            <div class="food-item">
-              <input class="item-input" type="text" placeholder="Food Item">
+            <div class="course-item">
+              <input class="item-input" type="text" placeholder="Item Name">
               <input class="item-input" type="number" placeholder="Qty.">
               <input class="item-input" type="text" placeholder="Scale (Optional)">
               <br/>
             </div>
-            <div class="food-item">
-              <input class="item-input" type="text" placeholder="Food Item">
+            <div class="course-item">
+              <input class="item-input" type="text" placeholder="Item Name">
               <input class="item-input" type="number" placeholder="Qty.">
               <input class="item-input" type="text" placeholder="Scale (Optional)">
               <br/>
@@ -71,25 +71,25 @@
           <button class="course-button" onclick="_removeInput('food-item-container-72hour')">Remove</button>  
         </div>
         <div id="supplies-container-72hour">
-          <div id="supplies-header-72hour">
+          <div class="supplies-header">
             <h2 class="food-title container-title">Supplies</h2>
             <img class="info-icon" src="../images/info.png">
           </div>
           <div id="supplies-item-container-72hour">
-            <div class="food-item">
-              <input class="item-input" type="text" placeholder="Supply Item">
+            <div class="course-item">
+              <input class="item-input" type="text" placeholder="Item Name">
               <input class="item-input"type="number" placeholder="Qty.">
               <input class="item-input" type="text" placeholder="Scale (Optional)">
               <br/>
             </div>
-            <div class="food-item">
-              <input class="item-input" type="text" placeholder="Supply Item">
+            <div class="course-item">
+              <input class="item-input" type="text" placeholder="Item Name">
               <input class="item-input" type="number" placeholder="Qty.">
               <input class="item-input" type="text" placeholder="Scale (Optional)">
               <br/>
             </div>
-            <div class="food-item">
-              <input class="item-input" type="text" placeholder="Supply Item">
+            <div class="course-item">
+              <input class="item-input" type="text" placeholder="Item Name">
               <input class="item-input" type="number" placeholder="Qty.">
               <input class="item-input" type="text" placeholder="Scale (Optional)">
               <br/>
@@ -99,28 +99,209 @@
           <button class="course-button" onclick="_removeInput('supplies-item-container-72hour')">Remove</button>  
         </div>
       <div class="button-container">
-        <button class="course-button" onclick="_goToNextPage('section-1', 'basic-info')">Prev</button>
-        <button class="course-button" onclick="_goToPreviousPage('section-1', 'section-2')">Next</button>
+        <button class="course-button" onclick="_goToPreviousPage('section-1', 'basic-info')">Prev</button>
+        <button class="course-button" onclick="_goToNextPage('section-1', 'section-2')">Next</button>
       </div>
     </div>
     <div id="section-2">
       <h1>1 Month (30 Days)</h1>
+      <div class="food-header">
+        <h2 class="food-title container-title">Food</h2>
+        <img class="info-icon" src="../images/info.png">
+      </div>
+      <div id="food-item-container-1month">
+        <div class="course-item">
+          <input class="item-input" type="text" placeholder="Item Name">
+          <input class="item-input"type="number" placeholder="Qty.">
+          <input class="item-input" type="text" placeholder="Scale (Optional)">
+          <br/>
+        </div>
+        <div class="course-item">
+          <input class="item-input" type="text" placeholder="Item Name">
+          <input class="item-input" type="number" placeholder="Qty.">
+          <input class="item-input" type="text" placeholder="Scale (Optional)">
+          <br/>
+        </div>
+        <div class="course-item">
+          <input class="item-input" type="text" placeholder="Item Name">
+          <input class="item-input" type="number" placeholder="Qty.">
+          <input class="item-input" type="text" placeholder="Scale (Optional)">
+          <br/>
+        </div>
+        <div class="course-item">
+          <input class="item-input" type="text" placeholder="Item Name">
+          <input class="item-input"type="number" placeholder="Qty.">
+          <input class="item-input" type="text" placeholder="Scale (Optional)">
+          <br/>
+        </div>
+        <div class="course-item">
+          <input class="item-input" type="text" placeholder="Item Name">
+          <input class="item-input" type="number" placeholder="Qty.">
+          <input class="item-input" type="text" placeholder="Scale (Optional)">
+          <br/>
+        </div>
+        <div class="course-item">
+          <input class="item-input" type="text" placeholder="Item Name">
+          <input class="item-input" type="number" placeholder="Qty.">
+          <input class="item-input" type="text" placeholder="Scale (Optional)">
+          <br/>
+        </div>
+      </div>
+      <button class="course-button" onclick="_addInput('food-item-container-1month')">Add</button>
+      <button class="course-button" onclick="_removeInput('food-item-container-1month')">Remove</button>  
+      <div id="supplies-container-1month">
+        <div class="supplies-header">
+          <h2 class="food-title container-title">Supplies</h2>
+          <img class="info-icon" src="../images/info.png">
+        </div>
+        <div id="supplies-item-container-1month">
+          <div class="course-item">
+            <input class="item-input" type="text" placeholder="Item Name">
+            <input class="item-input"type="number" placeholder="Qty.">
+            <input class="item-input" type="text" placeholder="Scale (Optional)">
+            <br/>
+          </div>
+          <div class="course-item">
+            <input class="item-input" type="text" placeholder="Item Name">
+            <input class="item-input" type="number" placeholder="Qty.">
+            <input class="item-input" type="text" placeholder="Scale (Optional)">
+            <br/>
+          </div>
+          <div class="course-item">
+            <input class="item-input" type="text" placeholder="Item Name">
+            <input class="item-input" type="number" placeholder="Qty.">
+            <input class="item-input" type="text" placeholder="Scale (Optional)">
+            <br/>
+          </div>
+          <div class="course-item">
+            <input class="item-input" type="text" placeholder="Item Name">
+            <input class="item-input"type="number" placeholder="Qty.">
+            <input class="item-input" type="text" placeholder="Scale (Optional)">
+            <br/>
+          </div>
+          <div class="course-item">
+            <input class="item-input" type="text" placeholder="Item Name">
+            <input class="item-input" type="number" placeholder="Qty.">
+            <input class="item-input" type="text" placeholder="Scale (Optional)">
+            <br/>
+          </div>
+          <div class="course-item">
+            <input class="item-input" type="text" placeholder="Item Name">
+            <input class="item-input" type="number" placeholder="Qty.">
+            <input class="item-input" type="text" placeholder="Scale (Optional)">
+            <br/>
+          </div>
+        </div>
+      </div>
+      <button class="course-button" onclick="_addInput('supplies-item-container-1month')">Add</button>
+      <button class="course-button" onclick="_removeInput('supplies-item-container-1month')">Remove</button>  
       <div class="button-container">
-        <button class="course-button" onclick="_changeSectionFromTo('section-2', 'section-1')">Prev</button>
-        <button class="course-button" onclick="_changeSectionFromTo('section-2', 'section-3')">Next</button>
+        <button class="course-button" onclick="_goToPreviousPage('section-2', 'section-1')">Prev</button>
+        <p id="basic-info-error-message" class="error-message hidden">One or more required inputs are not completed</p>
+        <button class="course-button" onclick="_goToNextPage('section-2', 'section-3')">Next</button>
       </div>
     </div>
     <div id="section-3">
       <h1>3 Month (90 Days)</h1>
+      <div class="food-header">
+        <h2 class="food-title container-title">Food</h2>
+        <img class="info-icon" src="../images/info.png">
+      </div>
+      <div id="food-item-container-3month">
+        <div class="course-item">
+          <input class="item-input" type="text" placeholder="Item Name">
+          <input class="item-input"type="number" placeholder="Qty.">
+          <input class="item-input" type="text" placeholder="Scale (Optional)">
+          <br/>
+        </div>
+        <div class="course-item">
+          <input class="item-input" type="text" placeholder="Item Name">
+          <input class="item-input" type="number" placeholder="Qty.">
+          <input class="item-input" type="text" placeholder="Scale (Optional)">
+          <br/>
+        </div>
+        <div class="course-item">
+          <input class="item-input" type="text" placeholder="Item Name">
+          <input class="item-input" type="number" placeholder="Qty.">
+          <input class="item-input" type="text" placeholder="Scale (Optional)">
+          <br/>
+        </div>
+        <div class="course-item">
+          <input class="item-input" type="text" placeholder="Item Name">
+          <input class="item-input"type="number" placeholder="Qty.">
+          <input class="item-input" type="text" placeholder="Scale (Optional)">
+          <br/>
+        </div>
+        <div class="course-item">
+          <input class="item-input" type="text" placeholder="Item Name">
+          <input class="item-input" type="number" placeholder="Qty.">
+          <input class="item-input" type="text" placeholder="Scale (Optional)">
+          <br/>
+        </div>
+        <div class="course-item">
+          <input class="item-input" type="text" placeholder="Item Name">
+          <input class="item-input" type="number" placeholder="Qty.">
+          <input class="item-input" type="text" placeholder="Scale (Optional)">
+          <br/>
+        </div>
+      </div>
+      <button class="course-button" onclick="_addInput('food-item-container-3month')">Add</button>
+      <button class="course-button" onclick="_removeInput('food-item-container-3month')">Remove</button>  
+      <div id="supplies-container-3month">
+        <div class="supplies-header">
+          <h2 class="food-title container-title">Supplies</h2>
+          <img class="info-icon" src="../images/info.png">
+        </div>
+        <div id="supplies-item-container-3month">
+          <div class="course-item">
+            <input class="item-input" type="text" placeholder="Item Name">
+            <input class="item-input"type="number" placeholder="Qty.">
+            <input class="item-input" type="text" placeholder="Scale (Optional)">
+            <br/>
+          </div>
+          <div class="course-item">
+            <input class="item-input" type="text" placeholder="Item Name">
+            <input class="item-input" type="number" placeholder="Qty.">
+            <input class="item-input" type="text" placeholder="Scale (Optional)">
+            <br/>
+          </div>
+          <div class="course-item">
+            <input class="item-input" type="text" placeholder="Item Name">
+            <input class="item-input" type="number" placeholder="Qty.">
+            <input class="item-input" type="text" placeholder="Scale (Optional)">
+            <br/>
+          </div>
+          <div class="course-item">
+            <input class="item-input" type="text" placeholder="Item Name">
+            <input class="item-input"type="number" placeholder="Qty.">
+            <input class="item-input" type="text" placeholder="Scale (Optional)">
+            <br/>
+          </div>
+          <div class="course-item">
+            <input class="item-input" type="text" placeholder="Item Name">
+            <input class="item-input" type="number" placeholder="Qty.">
+            <input class="item-input" type="text" placeholder="Scale (Optional)">
+            <br/>
+          </div>
+          <div class="course-item">
+            <input class="item-input" type="text" placeholder="Item Name">
+            <input class="item-input" type="number" placeholder="Qty.">
+            <input class="item-input" type="text" placeholder="Scale (Optional)">
+            <br/>
+          </div>
+        </div>
+      </div>
+      <button class="course-button" onclick="_addInput('supplies-item-container-3month')">Add</button>
+      <button class="course-button" onclick="_removeInput('supplies-item-container-3month')">Remove</button>  
       <div class="button-container">
-        <button class="course-button" onclick="_changeSectionFromTo('section-3', 'section-2')">Prev</button>
-        <button class="course-button" onclick="_changeSectionFromTo('section-3', 'final-page')">Next</button>
+        <button class="course-button" onclick="_goToPreviousPage('section-3', 'section-2')">Prev</button>
+        <button class="course-button" onclick="_goToNextPage('section-3', 'final-page')">Next</button>
       </div>
     </div>
     <div id="final-page">
       <h1>Your Plan</h1>
       <div class="button-container">
-        <button class="course-button" onclick="_changeSectionFromTo('final-page', 'section-3')">Edit Plan</button>
+        <button class="course-button" onclick="_goToPreviousPage('final-page', 'section-3')">Edit Plan</button>
       </div>
     </div>
   </main>
@@ -145,7 +326,7 @@
     const foodItems = document.getElementById('food-item-container-72hour').children;
     const supplyItems = document.getElementById('supplies-item-container-72hour').children;
 
-
+    // Find all inputs in food and set in data
     for (let foodItem = 0; foodItem < foodItems.length; foodItem++) {
       let foodItemInputs = foodItems[foodItem].children;
       let foodItemData = { name: foodItemInputs[0].value, 
@@ -153,21 +334,63 @@
                           scale: foodItemInputs[2].value };
       data72Hour.foodItems.push(foodItemData);
     }
+
+    // Find all inputs in supplies and set in data
     for (let supplyItem = 0; supplyItem < supplyItems.length; supplyItem++) {
       let supplyItemInputs = supplyItems[supplyItem].children;
       let suppluItemData = { name: supplyItemInputs[0].value, 
-                          quantity: supplyItemInputs[1].value, 
-                          scale: supplyItemInputs[2].value };
+                             quantity: supplyItemInputs[1].value, 
+                             scale: supplyItemInputs[2].value };
       data72Hour.supplyItems.push(suppluItemData);
     }
-
-    console.log("data72Hour: ", data72Hour);
   }
   function set1Month() {
+    data1Month = { foodItems: [], supplyItems: [] };
+    const foodItems = document.getElementById('food-item-container-1month').children;
+    const supplyItems = document.getElementById('supplies-item-container-1month').children;
 
+    // Find all inputs in food and set in data
+    for (let foodItem = 0; foodItem < foodItems.length; foodItem++) {
+      let foodItemInputs = foodItems[foodItem].children;
+      let foodItemData = { name: foodItemInputs[0].value, 
+                          quantity: foodItemInputs[1].value, 
+                          scale: foodItemInputs[2].value };
+      data1Month.foodItems.push(foodItemData);
+    }
+
+    // Find all inputs in supplies and set in data
+    for (let supplyItem = 0; supplyItem < supplyItems.length; supplyItem++) {
+      let supplyItemInputs = supplyItems[supplyItem].children;
+      let suppluItemData = { name: supplyItemInputs[0].value, 
+                             quantity: supplyItemInputs[1].value, 
+                             scale: supplyItemInputs[2].value };
+      data1Month.supplyItems.push(suppluItemData);
+    }
   }
   function set3Month() {
+    console.log("HERE");
+    data3Month = { foodItems: [], supplyItems: [] };
+    const foodItems = document.getElementById('food-item-container-3month').children;
+    const supplyItems = document.getElementById('supplies-item-container-3month').children;
 
+    // Find all inputs in food and set in data
+    for (let foodItem = 0; foodItem < foodItems.length; foodItem++) {
+      let foodItemInputs = foodItems[foodItem].children;
+      let foodItemData = { name: foodItemInputs[0].value, 
+                          quantity: foodItemInputs[1].value, 
+                          scale: foodItemInputs[2].value };
+      data3Month.foodItems.push(foodItemData);
+    }
+
+    // Find all inputs in supplies and set in data
+    for (let supplyItem = 0; supplyItem < supplyItems.length; supplyItem++) {
+      let supplyItemInputs = supplyItems[supplyItem].children;
+      let suppluItemData = { name: supplyItemInputs[0].value, 
+                             quantity: supplyItemInputs[1].value, 
+                             scale: supplyItemInputs[2].value };
+      data3Month.supplyItems.push(suppluItemData);
+    }
+    console.log("3 Month: ", data3Month);
   }
   function _storeData(location) {
     if (location === "basic-info") setBasicInfo();
@@ -182,14 +405,23 @@
    * Adds an text input to a given section
    */
   function _addInput(section) {
-
+    let itemContainer = document.createElement("div");  
+    itemContainer.classList.add("course-item");              
+    itemContainer.innerHTML = `
+      <input class="item-input" type="text" placeholder="Item Name">
+      <input class="item-input" type="number" placeholder="Qty.">
+      <input class="item-input" type="text" placeholder="Scale (Optional)">
+      <br/>
+    `;
+    document.getElementById(section).appendChild(itemContainer);
   }
   /*
    * _removeInput
    * Removes an text input to a given section
    */
   function _removeInput(section) {
-
+    let itemContainer = document.getElementById(section);
+    itemContainer.removeChild(itemContainer.lastElementChild);
   }
 
   function _goToPreviousPage(changeFrom, changeTo) {

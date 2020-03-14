@@ -67,20 +67,28 @@ main {
 .container-title {
   margin-right: 5px;
 }
+.course-item {
+  margin: 10px 0 10px 0;
+}
 
 .item-input {
-  height: 20px;
-  font-size: 18px;
+  height: 30px;
+  font-size: 16px;
 }
 
 /*** 72 Hour ***/
-#food-header-72hour {
+.food-header, .supplies-header {
   width: 100%;
   display: flex;
+  margin-top: 20px;
 }
 
 
 /*** DISPLAY: NONE ***/
 #basic-info, #section-1, #section-2, #section-3, #final-page {
   display: none;
+}
+
+.hidden {
+  visibility: hidden;
 }
