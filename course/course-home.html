@@ -420,24 +420,28 @@
     section1Container.classList.add('plan-section');          
     let section1HTML = `<h2>72 Hour</h2>`;
     data72Hour.foodItems.forEach((item) => {
-      section1HTML += `
-        <div class="display-flex">
-          <img class="checkbox" src="./../images/checkbox.png" />
-          <p class="plan-item plan-item-name">${item.name}</p>
-          <p class="plan-item">${item.quantity * basicInfo.peopleCount * 3}</p>
-          <p class="plan-item">${item.scale}</p>
-        </div>
-      `
+      if (item.name && item.quantity) {
+        section1HTML += `
+          <div class="display-flex">
+            <img class="checkbox" src="./../images/checkbox.png" />
+            <p class="plan-item plan-item-name">${item.name}</p>
+            <p class="plan-item">${item.quantity * basicInfo.peopleCount * 3}</p>
+            <p class="plan-item">${item.scale}</p>
+          </div>
+        `
+      }
     });
     data72Hour.supplyItems.forEach((item) => {
-      section1HTML += `
-        <div class="display-flex">
-          <img class="checkbox" src="./../images/checkbox.png" />
-          <p class="plan-item plan-item-name">${item.name}</p>
-          <p class="plan-item">${item.quantity * basicInfo.peopleCount}</p>
-          <p class="plan-item">${item.scale}</p>
-        </div>
-      `;
+      if (item.name && item.quantity) {
+        section1HTML += `
+          <div class="display-flex">
+            <img class="checkbox" src="./../images/checkbox.png" />
+            <p class="plan-item plan-item-name">${item.name}</p>
+            <p class="plan-item">${item.quantity * basicInfo.peopleCount}</p>
+            <p class="plan-item">${item.scale}</p>
+          </div>
+        `;
+      }
     });
     section1Container.innerHTML = section1HTML;
     planContainer.appendChild(section1Container);
@@ -447,24 +451,28 @@
     section2Container.classList.add('plan-section');             
     let section2HTML = `<h2>1 Month</h2>`;
     data1Month.foodItems.forEach((item) => {
-      section2HTML += `
-        <div class="display-flex">
-          <img class="checkbox" src="./../images/checkbox.png" />
-          <p class="plan-item plan-item-name">${item.name}</p>
-          <p class="plan-item">${item.quantity * basicInfo.peopleCount * 30}</p>
-          <p class="plan-item">${item.scale}</p>
-        </div>
-      `
+      if (item.name && item.quantity) {
+        section2HTML += `
+          <div class="display-flex">
+            <img class="checkbox" src="./../images/checkbox.png" />
+            <p class="plan-item plan-item-name">${item.name}</p>
+            <p class="plan-item">${item.quantity * basicInfo.peopleCount * 30}</p>
+            <p class="plan-item">${item.scale}</p>
+          </div>
+        `
+      }
     });
     data1Month.supplyItems.forEach((item) => {
-      section2HTML += `
-        <div class="display-flex">
-          <img class="checkbox" src="./../images/checkbox.png" />
-          <p class="plan-item plan-item-name">${item.name}</p>
-          <p class="plan-item">${item.quantity * basicInfo.peopleCount}</p>
-          <p class="plan-item">${item.scale}</p>
-        </div>
-      `;
+      if (item.name && item.quantity) {
+        section2HTML += `
+          <div class="display-flex">
+            <img class="checkbox" src="./../images/checkbox.png" />
+            <p class="plan-item plan-item-name">${item.name}</p>
+            <p class="plan-item">${item.quantity * basicInfo.peopleCount}</p>
+            <p class="plan-item">${item.scale}</p>
+          </div>
+        `;
+      }
     });
     section2Container.innerHTML = section2HTML;
     planContainer.appendChild(section2Container);
@@ -474,24 +482,28 @@
     section3Container.classList.add('plan-section');           
     let section3HTML = `<h2>3 Month</h2>`;
     data3Month.foodItems.forEach((item) => {
-      section3HTML += `
-        <div class="display-flex">
-          <img class="checkbox" src="./../images/checkbox.png" />
-          <p class="plan-item plan-item-name">${item.name}</p>
-          <p class="plan-item">${item.quantity * basicInfo.peopleCount * 90}</p>
-          <p class="plan-item">${item.scale}</p>
-        </div>
-      `
+      if (item.name && item.quantity) {
+        section3HTML += `
+          <div class="display-flex">
+            <img class="checkbox" src="./../images/checkbox.png" />
+            <p class="plan-item plan-item-name">${item.name}</p>
+            <p class="plan-item">${item.quantity * basicInfo.peopleCount * 90}</p>
+            <p class="plan-item">${item.scale}</p>
+          </div>
+        `;
+      }
     });
     data3Month.supplyItems.forEach((item) => {
-      section3HTML += `
-        <div class="display-flex">
-          <img class="checkbox" src="./../images/checkbox.png" />
-          <p class="plan-item plan-item-name">${item.name}</p>
-          <p class="plan-item">${item.quantity * basicInfo.peopleCount}</p>
-          <p class="plan-item">${item.scale}</p>
-        </div>
-      `;
+      if (item.name && item.quantity) {
+        section3HTML += `
+          <div class="display-flex">
+            <img class="checkbox" src="./../images/checkbox.png" />
+            <p class="plan-item plan-item-name">${item.name}</p>
+            <p class="plan-item">${item.quantity * basicInfo.peopleCount}</p>
+            <p class="plan-item">${item.scale}</p>
+          </div>
+        `;
+      }
     });
     section3Container.innerHTML = section3HTML;
     planContainer.appendChild(section3Container);
