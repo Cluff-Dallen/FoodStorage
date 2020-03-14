@@ -84,9 +84,29 @@ main {
 }
 
 
+.checkbox {
+  height: 18px;
+  width: 18px;
+  margin-right: 10px;
+}
+
+.plan-item {
+  margin-right: 5px;
+}
+.plan-item-name {
+  font-weight: bolder;
+}
+.plan-section {
+  margin-bottom: 15px;
+}
+
 /*** DISPLAY: NONE ***/
 #basic-info, #section-1, #section-2, #section-3, #final-page {
   display: none;
+}
+
+.display-flex {
+  display: flex;
 }
 
 .hidden {
