@@ -36,6 +36,7 @@
       <div class="flex"><p class="info-title">Number of people in household: </p><input id="basic-info-people-input" class="info-number-input" type="number"></input></div>
       <div class="button-container">
         <button class="course-button" onclick="_goToPreviousPage('basic-info', 'intro')">Prev</button>
+        <p id="basic-info-error-message" class="error-message">One or more required inputs are not completed</p>
         <button class="course-button" onclick="_goToNextPage('basic-info', 'section-1');">Next</button>
       </div>
     </div>
@@ -129,9 +130,9 @@
 <script>
   /*** DATA ***/
   let basicInfo = { peopleCount: 0};
-  let data72Hour = {};
-  let data1Month = {};
-  let data3Month = {};
+  let data72Hour = { foodItems: [], supplyItems: [] };
+  let data1Month = { foodItems: [], supplyItems: [] };
+  let data3Month = { foodItems: [], supplyItems: [] };
 
   /*** SETTERS ***/
   function setBasicInfo() {
@@ -140,7 +141,27 @@
      basicInfo.peopleCount = inputAmount;
   }
   function set72Hour() {
+    data72Hour = { foodItems: [], supplyItems: [] };
+    const foodItems = document.getElementById('food-item-container-72hour').children;
+    const supplyItems = document.getElementById('supplies-item-container-72hour').children;
 
+
+    for (let foodItem = 0; foodItem < foodItems.length; foodItem++) {
+      let foodItemInputs = foodItems[foodItem].children;
+      let foodItemData = { name: foodItemInputs[0].value, 
+                          quantity: foodItemInputs[1].value, 
+                          scale: foodItemInputs[2].value };
+      data72Hour.foodItems.push(foodItemData);
+    }
+    for (let supplyItem = 0; supplyItem < supplyItems.length; supplyItem++) {
+      let supplyItemInputs = supplyItems[supplyItem].children;
+      let suppluItemData = { name: supplyItemInputs[0].value, 
+                          quantity: supplyItemInputs[1].value, 
+                          scale: supplyItemInputs[2].value };
+      data72Hour.supplyItems.push(suppluItemData);
+    }
+
+    console.log("data72Hour: ", data72Hour);
   }
   function set1Month() {
 
