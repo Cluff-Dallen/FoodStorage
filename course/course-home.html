@@ -300,6 +300,17 @@
     </div>
     <div id="final-page">
       <h1>Your Plan</h1>
+      <div id="plan-container">
+        <div id="plan-72hour">
+
+        </div>
+        <div id="plan-1month">
+
+        </div>
+        <div id="plan-3month">
+
+        </div>
+      </div>
       <div class="button-container">
         <button class="course-button" onclick="_goToPreviousPage('final-page', 'section-3')">Edit Plan</button>
       </div>
@@ -331,7 +342,7 @@
       let foodItemInputs = foodItems[foodItem].children;
       let foodItemData = { name: foodItemInputs[0].value, 
                           quantity: foodItemInputs[1].value, 
-                          scale: foodItemInputs[2].value };
+                          scale: foodItemInputs[2].value || '' };
       data72Hour.foodItems.push(foodItemData);
     }
 
@@ -340,7 +351,7 @@
       let supplyItemInputs = supplyItems[supplyItem].children;
       let suppluItemData = { name: supplyItemInputs[0].value, 
                              quantity: supplyItemInputs[1].value, 
-                             scale: supplyItemInputs[2].value };
+                             scale: supplyItemInputs[2].value || '' };
       data72Hour.supplyItems.push(suppluItemData);
     }
   }
@@ -354,7 +365,7 @@
       let foodItemInputs = foodItems[foodItem].children;
       let foodItemData = { name: foodItemInputs[0].value, 
                           quantity: foodItemInputs[1].value, 
-                          scale: foodItemInputs[2].value };
+                          scale: foodItemInputs[2].value || '' };
       data1Month.foodItems.push(foodItemData);
     }
 
@@ -363,7 +374,7 @@
       let supplyItemInputs = supplyItems[supplyItem].children;
       let suppluItemData = { name: supplyItemInputs[0].value, 
                              quantity: supplyItemInputs[1].value, 
-                             scale: supplyItemInputs[2].value };
+                             scale: supplyItemInputs[2].value || '' };
       data1Month.supplyItems.push(suppluItemData);
     }
   }
@@ -378,7 +389,7 @@
       let foodItemInputs = foodItems[foodItem].children;
       let foodItemData = { name: foodItemInputs[0].value, 
                           quantity: foodItemInputs[1].value, 
-                          scale: foodItemInputs[2].value };
+                          scale: foodItemInputs[2].value || '' };
       data3Month.foodItems.push(foodItemData);
     }
 
@@ -387,7 +398,7 @@
       let supplyItemInputs = supplyItems[supplyItem].children;
       let suppluItemData = { name: supplyItemInputs[0].value, 
                              quantity: supplyItemInputs[1].value, 
-                             scale: supplyItemInputs[2].value };
+                             scale: supplyItemInputs[2].value || '' };
       data3Month.supplyItems.push(suppluItemData);
     }
     console.log("3 Month: ", data3Month);
@@ -397,6 +408,38 @@
     if (location === "section-1") set72Hour();
     if (location === "section-2") set1Month();
     if (location === "section-3") set3Month();
+  }
+
+  function _displayResults() {
+    // 72 Hour
+    const planContainer = document.getElementById('plan-container');
+    planContainer.innerHTML = '';
+    let section1Container = document.createElement("div");             
+    let section1HTML = `<h2>72 Hour</h2>`;
+    data72Hour.foodItems.forEach((item) => {
+      section1HTML += `
+        <div>
+          <h3>${item.name}</h3>
+          <p>${item.quantity * basicInfo.peopleCount * 3}</p>
+          <p>${item.scale}</p>
+        </div>
+      `
+    });
+    data72Hour.supplyItems.forEach((item) => {
+      section1HTML += `
+        <div>
+          <h3>${item.name}</h3>
+          <p>${item.quantity * basicInfo.peopleCount * 3}</p>
+          <p>${item.scale}</p>
+        </div>
+      `;
+    });
+    section1Container.innerHTML = section1HTML;
+    planContainer.appendChild(section1Container);
+
+    // 1 Month
+
+    // 3 Month
   }
 
   /*** TOGGLE ***/
@@ -430,6 +473,7 @@
   }
   function _goToNextPage(changeFrom, changeTo) {
     _storeData(changeFrom);
+    if (changeTo === 'final-page') _displayResults();
     _changeSectionFromTo(changeFrom, changeTo);
   }
   /*
