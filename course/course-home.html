@@ -426,7 +426,7 @@
           <div class="display-flex">
             <img class="checkbox" src="./../images/checkbox.png" />
             <p class="plan-item plan-item-name">${item.name}</p>
-            <p class="plan-item">${item.quantity * basicInfo.peopleCount * 3}</p>
+            <p class="plan-item">${item.quantity}</p>
             <p class="plan-item">${item.scale}</p>
           </div>
         `
@@ -438,7 +438,7 @@
           <div class="display-flex">
             <img class="checkbox" src="./../images/checkbox.png" />
             <p class="plan-item plan-item-name">${item.name}</p>
-            <p class="plan-item">${item.quantity * basicInfo.peopleCount}</p>
+            <p class="plan-item">${item.quantity}</p>
             <p class="plan-item">${item.scale}</p>
           </div>
         `;
@@ -457,7 +457,7 @@
           <div class="display-flex">
             <img class="checkbox" src="./../images/checkbox.png" />
             <p class="plan-item plan-item-name">${item.name}</p>
-            <p class="plan-item">${item.quantity * basicInfo.peopleCount * 30}</p>
+            <p class="plan-item">${item.quantity}</p>
             <p class="plan-item">${item.scale}</p>
           </div>
         `
@@ -469,7 +469,7 @@
           <div class="display-flex">
             <img class="checkbox" src="./../images/checkbox.png" />
             <p class="plan-item plan-item-name">${item.name}</p>
-            <p class="plan-item">${item.quantity * basicInfo.peopleCount}</p>
+            <p class="plan-item">${item.quantity}</p>
             <p class="plan-item">${item.scale}</p>
           </div>
         `;
@@ -488,7 +488,7 @@
           <div class="display-flex">
             <img class="checkbox" src="./../images/checkbox.png" />
             <p class="plan-item plan-item-name">${item.name}</p>
-            <p class="plan-item">${item.quantity * basicInfo.peopleCount * 90}</p>
+            <p class="plan-item">${item.quantity}</p>
             <p class="plan-item">${item.scale}</p>
           </div>
         `;
@@ -500,7 +500,7 @@
           <div class="display-flex">
             <img class="checkbox" src="./../images/checkbox.png" />
             <p class="plan-item plan-item-name">${item.name}</p>
-            <p class="plan-item">${item.quantity * basicInfo.peopleCount}</p>
+            <p class="plan-item">${item.quantity}</p>
             <p class="plan-item">${item.scale}</p>
           </div>
         `;
@@ -541,6 +541,14 @@
   }
   function _goToNextPage(changeFrom, changeTo) {
     _storeData(changeFrom);
+
+    if (changeFrom === 'basic-info') {
+      if (!basicInfo.peopleCount){
+        return;
+      }
+    }
+
+    
     if (changeTo === 'final-page') _displayResults();
     _changeSectionFromTo(changeFrom, changeTo);
   }
