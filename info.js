@@ -1,10 +1,38 @@
 const resourceItemsData = [
   {
-    "name": "7 Gallon Water Jug",
-    "href": "https://www.amazon.com/Reliance-Products-Aqua-Tainer-Gallon-Container/dp/B001QC31G6?ref_=fsclp_pl_dp_2",
-    "imgSrc": "https://images-na.ssl-images-amazon.com/images/I/51eAFKbEKoL._AC_.jpg",
-    "price": 15.00,
-    "about": "Storing water safely and for longer term is important. This can be done with a large water container like this. Designed to be space saving, and convient. Holds up to 7 gallons."
+    "name": "Carrots",
+    "href": "https://store.churchofjesuschrist.org/usa/en/food-storage-3074457345616678849-1/carrots",
+    "imgSrc": "https://store.churchofjesuschrist.org/wcsimages/LDSCAS/products/386/367200_004386_950_p_348.jpg",
+    "price": 63.00,
+    "about" : "Dehydrated carrots. This contains 10 large cans. Shelf life of over 30 years if stored properly. Servings per container is 45."
+  },
+  {
+    "name": "Macaroni",
+    "href": "https://store.churchofjesuschrist.org/usa/en/food-storage-3074457345616678849-1/macaroni-235200-1",
+    "imgSrc": "https://store.churchofjesuschrist.org/wcsimages/LDSCAS/products/Non-language/235200_004376_000_p_348.jpg",
+    "price": 53.00,
+    "about" : "Macaroni. This contains 10 large cans. Shelf life of over 30 years if stored properly. Servings per container is 24."
+  },
+  {
+    "name": "Nonfat Dry Milk",
+    "href": "https://store.churchofjesuschrist.org/usa/en/food-storage-3074457345616678849-1/nonfat-dry-milk",
+    "imgSrc": "https://store.churchofjesuschrist.org/wcsimages/LDSCAS/products/Non-language/352500_004366_000_p_348.jpg",
+    "price": 62.00,
+    "about" : "Nonfat dry milk. This contains 12 puches. Shelf life of over 20 years if stored properly. Servings per container is 29."
+  },
+  {
+    "name": "White Flour",
+    "href": "https://store.churchofjesuschrist.org/usa/en/food-storage-3074457345616678849-1/white-flour",
+    "imgSrc": "https://store.churchofjesuschrist.org/wcsimages/LDSCAS/products/Non-language/209400_004364_000_p_348.jpg",
+    "price": 25.00,
+    "about" : "White flour. This contains 10 large cans. Shelf life of over 10 years if stored properly. Servings per container is 64."
+  },
+  {
+    "name": "Spagetti Bites",
+    "href": "https://store.churchofjesuschrist.org/usa/en/food-storage-3074457345616678849-1/spaghetti-bites",
+    "imgSrc": "https://store.churchofjesuschrist.org/wcsimages/LDSCAS/products/Non-language/235100_004374_000_p_348.jpg",
+    "price": 48.00,
+    "about" : "Spagetti bites. This contains 10 large cans. Shelf life of over 30 years if stored properly. Servings per container is 22."
   },
   {
     "name": "Apple Slices",
@@ -54,6 +82,41 @@ const resourceItemsData = [
     "imgSrc": "https://store.churchofjesuschrist.org/wcsimages/LDSCAS/products/Non-language/234900_004368_000_p_348.jpg",
     "price": 40.00,
     "about" : "Granulated sugar. This contains 10 large cans. Shelf life of over 30 years if stored properly. Servings per container is 693."
+  },
+  {
+    "name": "Granola Bars",
+    "href": "https://www.amazon.com/Quaker-Chewy-Granola-Variety-Count/dp/B01GQ5WNC0/ref=sr_1_1_sspa?keywords=granola+bars&qid=1584345267&sr=8-1-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEzU1FaVVBNQk9URTBQJmVuY3J5cHRlZElkPUEwNDE1MzM0VDBPV1o0UDgzMlI4JmVuY3J5cHRlZEFkSWQ9QTA2Nzc5MDMzME1CMExRVE0wMlhEJndpZGdldE5hbWU9c3BfYXRmJmFjdGlvbj1jbGlja1JlZGlyZWN0JmRvTm90TG9nQ2xpY2s9dHJ1ZQ==",
+    "imgSrc": "https://images-na.ssl-images-amazon.com/images/I/913Cm3tsw2L._SL1500_.jpg",
+    "price": 12.00,
+    "about" : "Granola bars, contains 58 bars. 3 flavors. Great for a quick and lasting snack."
+  },
+  {
+    "name": "Trail Mix",
+    "href": "https://www.amazon.com/Kars-Nuts-Variety-Trail-Snacks/dp/B07STGBRCD/ref=sr_1_1_sspa?keywords=trail+mix&qid=1584345396&sr=8-1-spons&swrs=884CB341970E14D22D0232A2DE71F492&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUFIVTlYMUpWSDJROFgmZW5jcnlwdGVkSWQ9QTAwMTc2NDAzT0Y1NkpFTFoxR1A0JmVuY3J5cHRlZEFkSWQ9QTAxNjA0NDkyNVhYWDEyTktWM1dYJndpZGdldE5hbWU9c3BfYXRmJmFjdGlvbj1jbGlja1JlZGlyZWN0JmRvTm90TG9nQ2xpY2s9dHJ1ZQ==",
+    "imgSrc": "https://images-na.ssl-images-amazon.com/images/I/61%2BCN6B15ZL._SL1000_.jpg",
+    "price": 26.00,
+    "about" : "Tail Mix. Contains 24 individual packages. Great for a quick energizing snack."
+  },
+  {
+    "name": "Saltine Crackers",
+    "href": "https://www.amazon.com/Premium-Saltine-Crackers-Original-Ounce/dp/B00VHVK8AI/ref=sr_1_28?fpw=pantry&keywords=crackers&qid=1584345501&s=pantry&sr=8-28",
+    "imgSrc": "https://images-na.ssl-images-amazon.com/images/I/913Cm3tsw2L._SL1500_.jpg",
+    "price": 3.00,
+    "about" : "Saltine Crackers, 16oz. A salty easy to eat, long lasting food."
+  },
+  {
+    "name": "Beef Jerky",
+    "href": "https://www.amazon.com/Jack-Links-Beef-Jerky-Variety/dp/B07JL8WLDQ/ref=sr_1_7?keywords=beef+jerky&qid=1584345606&sr=8-7&swrs=5AD813C59FA4771CF7B2EC6C62423FF0",
+    "imgSrc": "https://images-na.ssl-images-amazon.com/images/I/91Z-267Na-L._SL1500_.jpg",
+    "price": 25.00,
+    "about" : "Jack Link's Beef jerky vareity pack. 3 packs. 1.25oz/pack. Great for long lasting energy, and a snack that you'll love!"
+  },
+  {
+    "name": "7 Gallon Water Jug",
+    "href": "https://www.amazon.com/Reliance-Products-Aqua-Tainer-Gallon-Container/dp/B001QC31G6?ref_=fsclp_pl_dp_2",
+    "imgSrc": "https://images-na.ssl-images-amazon.com/images/I/51eAFKbEKoL._AC_.jpg",
+    "price": 15.00,
+    "about": "Storing water safely and for longer term is important. This can be done with a large water container like this. Designed to be space saving, and convient. Holds up to 7 gallons."
   },
   {
     "name": "Water Filter (stick)",
@@ -117,69 +180,6 @@ const resourceItemsData = [
     "imgSrc": "https://images-na.ssl-images-amazon.com/images/I/81riPIgCVlL._AC_SL1500_.jpg",
     "price": 19.00,
     "about" : "You never know what you'll face. With this emergency radio, you'll have a way of checking what's going on and be able to recieve any emergency brodcasts."
-  },
-  {
-    "name": "Carrots",
-    "href": "https://store.churchofjesuschrist.org/usa/en/food-storage-3074457345616678849-1/carrots",
-    "imgSrc": "https://store.churchofjesuschrist.org/wcsimages/LDSCAS/products/386/367200_004386_950_p_348.jpg",
-    "price": 63.00,
-    "about" : "Dehydrated carrots. This contains 10 large cans. Shelf life of over 30 years if stored properly. Servings per container is 45."
-  },
-  {
-    "name": "Macaroni",
-    "href": "https://store.churchofjesuschrist.org/usa/en/food-storage-3074457345616678849-1/macaroni-235200-1",
-    "imgSrc": "https://store.churchofjesuschrist.org/wcsimages/LDSCAS/products/Non-language/235200_004376_000_p_348.jpg",
-    "price": 53.00,
-    "about" : "Macaroni. This contains 10 large cans. Shelf life of over 30 years if stored properly. Servings per container is 24."
-  },
-  {
-    "name": "Nonfat Dry Milk",
-    "href": "https://store.churchofjesuschrist.org/usa/en/food-storage-3074457345616678849-1/nonfat-dry-milk",
-    "imgSrc": "https://store.churchofjesuschrist.org/wcsimages/LDSCAS/products/Non-language/352500_004366_000_p_348.jpg",
-    "price": 62.00,
-    "about" : "Nonfat dry milk. This contains 12 puches. Shelf life of over 20 years if stored properly. Servings per container is 29."
-  },
-  {
-    "name": "White Flour",
-    "href": "https://store.churchofjesuschrist.org/usa/en/food-storage-3074457345616678849-1/white-flour",
-    "imgSrc": "https://store.churchofjesuschrist.org/wcsimages/LDSCAS/products/Non-language/209400_004364_000_p_348.jpg",
-    "price": 25.00,
-    "about" : "White flour. This contains 10 large cans. Shelf life of over 10 years if stored properly. Servings per container is 64."
-  },
-  {
-    "name": "Spagetti Bites",
-    "href": "https://store.churchofjesuschrist.org/usa/en/food-storage-3074457345616678849-1/spaghetti-bites",
-    "imgSrc": "https://store.churchofjesuschrist.org/wcsimages/LDSCAS/products/Non-language/235100_004374_000_p_348.jpg",
-    "price": 48.00,
-    "about" : "Spagetti bites. This contains 10 large cans. Shelf life of over 30 years if stored properly. Servings per container is 22."
-  },
-  {
-    "name": "Granola Bars",
-    "href": "https://www.amazon.com/Quaker-Chewy-Granola-Variety-Count/dp/B01GQ5WNC0/ref=sr_1_1_sspa?keywords=granola+bars&qid=1584345267&sr=8-1-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEzU1FaVVBNQk9URTBQJmVuY3J5cHRlZElkPUEwNDE1MzM0VDBPV1o0UDgzMlI4JmVuY3J5cHRlZEFkSWQ9QTA2Nzc5MDMzME1CMExRVE0wMlhEJndpZGdldE5hbWU9c3BfYXRmJmFjdGlvbj1jbGlja1JlZGlyZWN0JmRvTm90TG9nQ2xpY2s9dHJ1ZQ==",
-    "imgSrc": "https://images-na.ssl-images-amazon.com/images/I/913Cm3tsw2L._SL1500_.jpg",
-    "price": 12.00,
-    "about" : "Granola bars, contains 58 bars. 3 flavors. Great for a quick and lasting snack."
-  },
-  {
-    "name": "Trail Mix",
-    "href": "https://www.amazon.com/Kars-Nuts-Variety-Trail-Snacks/dp/B07STGBRCD/ref=sr_1_1_sspa?keywords=trail+mix&qid=1584345396&sr=8-1-spons&swrs=884CB341970E14D22D0232A2DE71F492&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUFIVTlYMUpWSDJROFgmZW5jcnlwdGVkSWQ9QTAwMTc2NDAzT0Y1NkpFTFoxR1A0JmVuY3J5cHRlZEFkSWQ9QTAxNjA0NDkyNVhYWDEyTktWM1dYJndpZGdldE5hbWU9c3BfYXRmJmFjdGlvbj1jbGlja1JlZGlyZWN0JmRvTm90TG9nQ2xpY2s9dHJ1ZQ==",
-    "imgSrc": "https://images-na.ssl-images-amazon.com/images/I/61%2BCN6B15ZL._SL1000_.jpg",
-    "price": 26.00,
-    "about" : "Tail Mix. Contains 24 individual packages. Great for a quick energizing snack."
-  },
-  {
-    "name": "Saltine Crackers",
-    "href": "https://www.amazon.com/Premium-Saltine-Crackers-Original-Ounce/dp/B00VHVK8AI/ref=sr_1_28?fpw=pantry&keywords=crackers&qid=1584345501&s=pantry&sr=8-28",
-    "imgSrc": "https://images-na.ssl-images-amazon.com/images/I/913Cm3tsw2L._SL1500_.jpg",
-    "price": 3.00,
-    "about" : "Saltine Crackers, 16oz. A salty easy to eat, long lasting food."
-  },
-  {
-    "name": "Beef Jerky",
-    "href": "https://www.amazon.com/Jack-Links-Beef-Jerky-Variety/dp/B07JL8WLDQ/ref=sr_1_7?keywords=beef+jerky&qid=1584345606&sr=8-7&swrs=5AD813C59FA4771CF7B2EC6C62423FF0",
-    "imgSrc": "https://images-na.ssl-images-amazon.com/images/I/91Z-267Na-L._SL1500_.jpg",
-    "price": 25.00,
-    "about" : "Jack Link's Beef jerky vareity pack. 3 packs. 1.25oz/pack. Great for long lasting energy, and a snack that you'll love!"
   },
   {
     "name": "Survival Knife",
