@@ -17,7 +17,7 @@
         <a id="menu-home-icon" href="../index.html">Home</a>
       </div>
       <div class="menu-item" id="menu-home">
-        <a id="course-home-icon" class="active">Interactive Course</a>
+        <a id="course-home-icon" class="active">Food Storage Checklist Creator</a>
       </div>
       <div class="menu-item">
         <a href="../resources-page/resources-home.html">Resources</a>
@@ -444,8 +444,12 @@
     _storeData(changeFrom);
 
     if (changeFrom === 'basic-info') {
-      if (!basicInfo.peopleCount){
+      if (!basicInfo.peopleCount || basicInfo.peopleCount === 0){
+        document.getElementById("basic-info-error-message").classList.remove("hidden")
         return;
+      }
+      else {
+        document.getElementById("basic-info-error-message").classList.add("hidden");
       }
     }
 

@@ -65,3 +65,12 @@ div.info-container > * {
 .information-item-container {
   padding: 10px;
 }
+
+#video-container {
+  width: 50%;
+  margin: 0 auto 0 auto;
+}
+
+h2 {
+  font-style: italic;
+}
